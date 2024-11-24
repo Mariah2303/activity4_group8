@@ -35,7 +35,7 @@ class Polygon:
         sum = 0
         for side in self.sides:
             sum += side
-        return f"The circumference is {sum}"
+        return sum
     
 def main():
     """
@@ -49,13 +49,13 @@ def main():
     hexagon = Polygon("Hexagon", [2, 2, 2, 2, 2, 2])
     
     print(triangle)
-    print(triangle.calculate_circumference())
+    print(f"The circumference is {triangle.calculate_circumference()}")
 
     print(square)
-    print(square.calculate_circumference())
+    print(f"The circumference is {square.calculate_circumference()}")
 
     print(hexagon)
-    print(hexagon.calculate_circumference())
+    print(f"The circumference is {hexagon.calculate_circumference()}")
     
 if __name__ == "__main__":
     main()
