@@ -30,10 +30,3 @@ class Polygon:
     def __str__(self):
         return f"{self.name} with sides: {self.sides}"
     
-# calculates the circumference for the polygon
-    def calculate_circumference(self):
-        sum = 0
-        for side in self.sides:
-            sum += side
-        return sum 
-    
