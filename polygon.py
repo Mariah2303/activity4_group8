@@ -1,40 +1,29 @@
-class Polygon:
-    def __init__(self, name: str, sides: list[float]):
 
-        self.name = name
-        self.sides = sides
-
-    def get_name(self):
-        return self.name
-
-    def get_sides(self):
-        return self.sides
+def calculate_circumference(self):
+    sum = 0
+    for side in self.sides:
+        sum += side
+    return sum
     
-
-
-
-
-
-
-
-
-
 def main():
     """
-    Creates and demonstrates Polygon objects.
+    This function is the main function that 
+    demonstrates the use of the class and takes no parameters
     """
 
-    # Create polygon objects
-    triangle = Polygon("Triangle", [3, 4, 5])
-    square = Polygon("Square", [4, 4, 4, 4])
-    hexagon = Polygon("Hexagon", [6, 6, 6, 6, 6, 6])
+    #objects
+    triangle = Polygon("Triangle", [3, 3, 4])
+    square = Polygon("Square", [2, 2, 2, 2])
+    hexagon = Polygon("Hexagon", [2, 2, 2, 2, 2, 2])
+    
+    print(triangle)
+    print(f"The circumference is {triangle.calculate_circumference()}")
 
-    # Print object information and circumference
-    for polygon in [triangle, square, hexagon]:
-        print(f"{polygon}")
-        circumference = polygon.calculate_circumference()
-        print(f"  Circumference: {circumference:.2f}")
+    print(square)
+    print(f"The circumference is {square.calculate_circumference()}")
 
-
+    print(hexagon)
+    print(f"The circumference is {hexagon.calculate_circumference()}")
+    
 if __name__ == "__main__":
-  main()
+    main()
